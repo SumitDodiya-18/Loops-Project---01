@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Object</title>
+</head>
+<style>
+    * {
+        background: rgb(18, 18, 18);
+    }
+
+    h1 {
+        color: rgb(158, 158, 158);
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <h1>
+        <center>
+            <u>1. Student Marks Analyzer</u>
+        </center>
+    </h1>
+
+    <script>
+        let students = [
+            { name: "Amit", marks: 75 },
+            { name: "Neha", marks: 58 },
+            { name: "Ravi", marks: 82 }
+        ];
+
+        students.map(s => console.log(s.name, s.marks));
+
+        let above60 = students.filter(s => s.marks > 60);
+        console.log("Above 60:", above60);
+
+        let totalMarks = students.reduce((sum, s) => sum + s.marks, 0);
+        console.log("Total Marks:", totalMarks);
+
+        students = [...students, { name: "Priya", marks: 90 }];
+        console.log("Updated Students:", students);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Object</title>
+</head>
+<style>
+    * {
+        background: rgb(18, 18, 18);
+    }
+
+    h1 {
+        color: rgb(158, 158, 158);
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <h1>
+        <center>
+            <u>2. Product Cart System</u>
+        </center>
+    </h1>
+
+    <script>
+    let products = [
+            { name: "Laptop", price: 60000, qty: 1 },
+            { name: "Mouse", price: 700, qty: 2 },
+            { name: "Keyboard", price: 1500, qty: 1 }
+        ];
+
+        products.map(p => console.log(p.name));
+
+        let costly = products.filter(p => p.price > 500);
+        console.log("Above 500:", costly);
+
+        let totalValue = products.reduce(
+            (sum, p) => sum + p.price * p.qty, 0
+        );
+        console.log("Total Cart Value:", totalValue);
+
+        products[0].qty = 2;
+        console.log("Updated Products:", products);
+    </script>
+
+</body>
+
+</html>

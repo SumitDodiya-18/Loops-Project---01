@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Object</title>
+</head>
+<style>
+    * {
+        background: rgb(18, 18, 18);
+    }
+
+    h1 {
+        color: rgb(158, 158, 158);
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <h1>
+        <center>
+            <u>4. Even-Odd Number Dashboard</u>
+        </center>
+    </h1>
+
+    <script>
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        let even = numbers.filter(n => n % 2 === 0);
+        let odd = numbers.filter(n => n % 2 !== 0);
+
+        let sum = numbers.reduce((s, n) => s + n, 0);
+
+        let squares = numbers.map(n => n * n);
+
+        console.log("Even:", even);
+        console.log("Odd:", odd);
+        console.log("Sum:", sum);
+        console.log("Squares:", squares);
+
+    </script>
+
+</body>
+
+</html>
